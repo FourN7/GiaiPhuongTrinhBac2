@@ -1,51 +1,60 @@
 package com.example.giaiphuongtrinhbac2;
 
 public class GiaiPhuongTrinhBac2 {
-    float a;
-    float b;
-    float c;
-    float x1;
-    float x2;
-    float x;
+    private double a,b,c;
 
-    public float getX() {
-        return x;
+    public GiaiPhuongTrinhBac2(double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
 
-    public float getX1() {
-        return x1;
+    public double getA() {
+        return a;
     }
 
-    public float getX2() {
-        return x2;
+    public void setA(double a) {
+        this.a = a;
     }
 
-    public float GiaiPhuongTrinh(float a ,float b ,float c){
-        if (a==0){
-            if (b==0) {
-                if (c == 0) {
-                    return 1;
-                }else {
-                    return -1;
-                }
-            }else{
-                x=(-c/b);
-                return 2;
-            }
+    public double getB() {
+        return b;
+    }
+
+    public void setB(double b) {
+        this.b = b;
+    }
+
+    public double getC() {
+        return c;
+    }
+
+    public void setC(double c) {
+        this.c = c;
+    }
+    public String tinhtoan(){
+        double x1,x2;
+        String chuoi="";
+        double delta=b*b-4*a*c;
+        if(a==0){
+            if(b==0){
+                if(c==0){
+                    chuoi = "Phương trình vô số nghiệm\n";}
+                else chuoi="Phương trình vô nghiêm\n";
+            }else {x1=-c/b; chuoi="Phuong trình có 1 nghiệm:\n X="+x1+"\n"; }
+        }else if(delta>0){
+            x1=(-b + Math.sqrt(delta)) / (2 * a);
+            x2=(-b - Math.sqrt(delta)) / (2 * a);
+            chuoi="Phương Trình có 2 nghiệm:\n"
+                    +"x1="+x1+"\n"
+                    +"x2="+x2+"\n";
+        }else if (delta==0){
+            x1=-b/(2*a);
+            chuoi="Phương Trình có nghiệm kép: x="+x1+"\n";
         }else {
-            float delta = b * b - 4 *( a * c);
-            if (delta > 0) {
-                x1 = (float) (-b + Math.sqrt(delta)) / (2 * a);
-                x2 = (float) (-b - Math.sqrt(delta)) / (2 * a);
-                return 3;
-            }
-            if (delta == 0) {
-                x1 = (-b / (2 * a));
-                return 4;
-            }
-            if(delta<0)
-                return -1;
+            chuoi="Phương trình vô nghiêm";
         }
-        return 3000;
+        return chuoi;
     }
+
 }

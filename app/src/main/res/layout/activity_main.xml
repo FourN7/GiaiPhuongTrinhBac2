@@ -12,57 +12,70 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Giai Phuong Trinh Bac 2"
+        android:text="Giải Phương Trình Bậc 2"
         android:textColor="@color/colorAccent"
         android:gravity="center"
         android:background="@color/colorPrimary"/>
+    <TextView
+        android:id="@+id/textView_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ax^2+bx+c=0"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        />
 
        <TextView
         android:id="@+id/textView_nhapa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nhap so a:" />
+        android:text="Nhập số a:" />
 
     <EditText
         android:id="@+id/editText_nhapa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="Nhap a" />
+        android:hint="Nhập số a" />
     <TextView
         android:id="@+id/textView_nhapb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nhap so b:" />
+        android:text="Nhập số b:" />
 
     <EditText
         android:id="@+id/editText_nhapb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="Nhap b" />
+        android:hint="Nhập số b:" />
     <TextView
         android:id="@+id/textView_nhapc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nhap so c:" />
+        android:text="Nhập số c:" />
 
     <EditText
         android:id="@+id/editText_nhapc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="Nhap c" />
+        android:hint="Nhập số c:" />
 
     <Button
         android:id="@+id/button_tinh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ket Qua" />
+        android:text="Kết Quả" />
+    <Button
+        android:id="@+id/button_thoat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thoát" />
 
 <TextView
     android:id="@+id/textView_ketqua"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:text="Ket qua:"/>
+    android:text="Kết quả:"/>
 </LinearLayout>
